@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Valentine 💖</title>
   <style>
     body {
       text-align: center;
-      font-family: Arial, sans-serif;
+      font-family: Arial;
       background: pink;
     }
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      margin: 10px;
-      cursor: pointer;
-    }
-    #no {
-      position: absolute;
+    img {
+      margin-top: 20px;
+      width: 300px;
+      display: none;
     }
   </style>
 </head>
@@ -24,17 +19,18 @@
 
 <h1>Will you be my Valentine? 💕</h1>
 
-<button onclick="alert('YAYYYY 💖💖💖')">Yes</button>
+<button onclick="showLove()">Yes</button>
 <button id="no">No</button>
 
+<br>
+
+<img id="foto" src="foto.jpg">
+
 <script>
-  const noBtn = document.getElementById("no");
-  noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 50);
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
-  });
+function showLove() {
+  document.getElementById("foto").style.display = "block";
+  alert("YAYYY 💖 I LOVE YOUU");
+}
 </script>
 
 </body>
